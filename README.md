@@ -1,4 +1,4 @@
-# funs-music-mobile
+# 这是一个仿照网易云音乐手机网页版的vue项目
 
 ## Project setup
 ```

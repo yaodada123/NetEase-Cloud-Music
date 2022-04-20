@@ -3,6 +3,7 @@
     <nav-bar>
       <div slot="center">yyy rush rush rush !</div>
     </nav-bar>
+    <tab-control :titles='["推荐音乐", "热歌榜", "搜索"]'></tab-control>
   </div>
 </template>
 
@@ -10,12 +11,15 @@
 import NavBar from "@/common/navbar/NavBar.vue";
 
 import { getRecommendSongList } from "@/network/home";
+import TabControl from '../../components/content/TabControl.vue';
 
 export default {
   name: "Home",
 
   components: {
     NavBar,
+    TabControl,
+
   },
 
   data() {
@@ -36,4 +40,5 @@ export default {
 </script>
 
 <style  scoped>
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div class="mini-bar">
     <div class="left">
       <slot name="left"></slot>
     </div>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "NavBar",
+  name: "FunsMusicMobileMinibar",
 
   data() {
     return {};
@@ -27,18 +27,23 @@ export default {
 </script>
 
 <style  scoped>
-.navbar {
+.mini-bar {
     display: flex;
-    height: 84px;
-    line-height: 44px;
+    height: 44px;
+    font-size: 18px;
     text-align: center;
-    font-size: 28px;
-    background-color: #d43c33;
+    line-height: 44px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow:1px 1px 2px rgb(110, 105, 105);
+}
+.left {
+    flex: 1;
+    
 }
 .center {
-    padding-top: 20px;
     flex: 1;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fff;
+}
+.right {
+    flex: 1;
 }
 </style>

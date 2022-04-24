@@ -8,3 +8,12 @@ export function getRecommendSongList() {
         // }
     })
 }
+
+export function getNewSong() {
+    return request({
+        url: '/personalized/newsong',
+        params: {
+            limit: 20,
+        }
+    })
+}

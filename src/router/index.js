@@ -2,14 +2,32 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/home/Home.vue'
 
+const Remmend = () => import("@/components/content/remmend/Remmend.vue");
+const HotSong = () => import("@/components/content/hotsong/HotSong.vue");
+const Search = () => import("@/components/content/search/Search.vue");
+
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect: '/remmend'
   },
+  {
+    path: '/remmend',
+    name: 'Remmend',
+    component: Remmend
+  },
+  {
+    path: '/hotsong',
+    name: 'HotSong',
+    component: HotSong
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: Search
+  }
 ]
 
 const router = new VueRouter({

@@ -6,6 +6,10 @@
          @click="itemClick(index)">
       <span>{{item}}</span>
     </div>
+
+    <div>
+
+    </div>
   </div>
 </template>
 
@@ -22,11 +26,17 @@
     },
     data() {
       return {
-        currentIndex: 0
+        currentIndex: 0,
+        path_0: {
+          0: '/remmend',
+          1: '/hotsong',
+          2: '/search', 
+        }
       }
     },
     methods: {
       itemClick(index) {
+        this.$router.push(this.path_0[index]);
         this.currentIndex = index;
         this.$emit('tabClick', index)
       }

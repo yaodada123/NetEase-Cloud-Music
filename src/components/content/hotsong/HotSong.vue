@@ -1,30 +1,32 @@
 <template>
-    <div class="hot-song">
-        热歌页面
-        
-    </div>
+  <div class="hot-song">热歌页面(专供许嵩)</div>
 </template>
 
 <script>
+import { getHotSong } from "@/network/home";
+
 export default {
-    name: 'Hotsong',
+  name: "Hotsong",
 
-    data() {
-        return {
-            
-        };
-    },
+  data() {
+    return {
+      dataList: {
+        hotSong: {},
+      },
+    };
+  },
 
-    mounted() {
-        
-    },
+  created() {
+      getHotSong().then(res => {
+          console.log(res);
+      })
+  },
 
-    methods: {
-        
-    },
+  mounted() {},
+
+  methods: {},
 };
 </script>
 
 <style scoped>
-
 </style>

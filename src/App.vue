@@ -1,20 +1,21 @@
 <template>
   <div id="app">
-    <nav-bar>
+    <!-- <nav-bar>
       <div slot="center">yyy rush rush rush !</div>
     </nav-bar>
-    <tab-control
-      :titles="['推荐音乐', '热歌榜', '搜索']"
-      class="tab-control"
-    ></tab-control>
-    <router-view /> 
+    
+      <tab-control
+        :titles="['推荐音乐', '热歌榜', '搜索']"
+        class="tab-control"
+      ></tab-control> -->
+    
+    <router-view />
   </div>
 </template>
 
 <script>
-import NavBar from "@/common/navbar/NavBar.vue";
-import TabControl from '@/components/content/TabControl.vue';
-
+// import NavBar from "@/common/navbar/NavBar.vue";
+// import TabControl from "@/components/content/TabControl.vue";
 
 export default {
   name: "App",
@@ -28,9 +29,10 @@ export default {
   methods: {},
 
   components: {
-    NavBar,
-    TabControl,
-  }
+    // NavBar,
+    // TabControl,
+  },
+  
 };
 </script>
 

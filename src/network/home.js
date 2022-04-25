@@ -17,3 +17,8 @@ export function getNewSong() {
         }
     })
 }
+export function getHotSong() {
+    return request({
+        url: '/artist/top/song?id=5771',// 许嵩的热歌
+    })
+}
